@@ -65,7 +65,7 @@ const create = <P, R>(
   }
 
   return function (this: TW | null | undefined | void, rules: P): R {
-    const tw = this || defaultTW
+    const tw = defaultTW || this
 
     let instance = instances.get(tw)
 
